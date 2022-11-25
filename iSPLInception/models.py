@@ -22,8 +22,8 @@ from tensorflow.keras.losses import CategoricalCrossentropy, Reduction
 # 'opportunity'
 # 'ucihar'
 
-dataset = 'pamap2'
-datapath = 'dataset/pamap2'
+dataset = 'daphnet'
+datapath = 'dataset/daphnet'
 
 # ................................................................................................ #
 

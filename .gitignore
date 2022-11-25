@@ -18,3 +18,7 @@ iSPLInception/models/daphnet/*
 iSPLInception/models/opportunity/*
 iSPLInception/models/pamap2/*
 iSPLInception/models/ucihar/*
+
+iSPLInception/logs/fit/*
+
+__pycache__

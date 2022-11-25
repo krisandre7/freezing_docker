@@ -83,7 +83,7 @@ def segment(x, y, window_size, dataset_signals=9):
     i_label = 0
     for (start, end) in windows(x, window_size):
         if len(x[start:end]) == window_size:
-            m = stats.mode(y[start:end])
+            m = stats.mode(y[start:end], keepdims=False)
             segments[i_segment] = x[start:end]
             labels[i_label] = m[0]
             i_label += 1

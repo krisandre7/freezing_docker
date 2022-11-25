@@ -33,8 +33,8 @@ img_path = f"images/"
 
 # Models to run
 for list_of_models in [
-    ['stacked_lstm', 'bilstm', 'ispl_inception'],
-    ['cnn', 'cnn_lstm', 'vanilla_lstm', 'ispl_inception'],
+    # ['stacked_lstm', 'bilstm', 'ispl_inception'],
+    # ['cnn', 'cnn_lstm', 'vanilla_lstm', 'ispl_inception'],
     ['ispl_inception'],
 ]:
     try:
@@ -164,6 +164,7 @@ for list_of_models in [
                     patience = 300
 
                 # Create and initialize the Model
+                print("OH SHI-")
                 model = eval(model_name + f"(input_shape, n_classes, metrics=METRICS, **hyperparameters)")
 
                 model.summary()
@@ -247,8 +248,8 @@ print('**Finished**')
 
 with open(report_name, "a") as rep:
     # Comparing the trained models
-    accuracy_dataframe = pd.Series(acc_per_model)
-    loss_dataframe = pd.Series(loss_per_model)
+    accuracy_dataframe = pd.Series(acc_per_model, dtype='float64')
+    loss_dataframe = pd.Series(loss_per_model, dtype='float64')
 
     rep.write(f"Accuracy comparison \n{pd.DataFrame(accuracy_dataframe)}\n\n")
     rep.write(f"Loss comparison \n{pd.DataFrame(loss_dataframe)}\n\n")
